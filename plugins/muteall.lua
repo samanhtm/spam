@@ -85,7 +85,7 @@ if not lang then
 if matches[1] == 'helpmute' then
 if not lang then
 text = [[
-*Beyond Mute Commands:*
+*saman Mute Commands:*
 *!mute all* `(hour) (minute) (seconds)`
 _Mute group at this time_ 
 *!mute hours* `(number)`
@@ -99,7 +99,7 @@ _Unmute group at this time_
 ]]
 elseif lang then
 text = [[
-*راهنمای بیصدا های ربات بیوند:*
+*راهنمای بیصدا های ربات سامان:*
 *!mute all* `(hour) (minute) (seconds)`
 _بیصدا کردن گروه با ساعت و دقیقه و ثانیه_ 
 *!mute hours* `(number)`
