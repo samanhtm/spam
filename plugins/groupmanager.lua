@@ -2862,8 +2862,8 @@ if matches[1] == 'newlink' and is_mod(msg) and not matches[2] then
    local hash = "gp_lang:"..msg.to.id
    local lang = redis:get(hash)
     local administration = load_data(_config.moderation.data) 
-				if not result then
-					administration[tostring(msg.to.id)]['settings']['linkgp'] = nil
+				if not result then					
+administration[tostring(msg.to.id)]['settings']['linkgp'] = nil
 					save_data(_config.moderation.data, administration)
        if not lang then
        return tdcli.sendMessage(msg.to.id, msg.id, 1, "_Bot is not group creator_\n_set a link for group with using_ /setlink", 1, 'md')
@@ -2896,8 +2896,8 @@ if matches[1] == 'newlink' and is_mod(msg) and not matches[2] then
 	   end
 		 data[tostring(chat)]['settings']['linkgp'] = matches[2]
 			 save_data(_config.moderation.data, data)
-      if not lang then
-			return 'Your group link has been saved'
+      if not lang then			
+return 'Your group link has been saved'
     else 
          return 'لینک گروه شما با موفقیت ذخیره شد'
        end
@@ -2966,9 +2966,9 @@ if matches[1] == 'newlink' and is_mod(msg) and not matches[2] then
   if matches[1] == "rules" then
  if not data[tostring(chat)]['rules'] then
    if not lang then
-     rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@BeyondTeam"
+     rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@saman_htm"
     elseif lang then
-       rules = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود.\n@BeyondTeam"
+       rules = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود.\n@saman_htm"
  end
         else
      rules = "*Group Rules :*\n"..data[tostring(chat)]['rules']
@@ -3161,16 +3161,16 @@ if matches[1] == "setlang" and is_owner(msg) then
 local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
  redis:del(hash)
-return "_Group Language Set To:_ EN\n@BeyondTeam"
+return "_Group Language Set To:_ EN\n@saman_htm"
   elseif matches[2] == "fa" then
 redis:set(hash, true)
-return "*زبان گروه تنظیم شد به : فارسی*\n@BeyondTeam"
+return "*زبان گروه تنظیم شد به : فارسی*\n@saman_htm"
 end
 end
 if matches[1] == "help" and is_mod(msg) then
 if not lang then
 text = [[
-*Beyond Bot Commands:*
+*saman Bot Commands:*
 *!setowner* `[username|id|reply]` 
 _Set Group Owner(Multi Owner)_
 *!remowner* `[username|id|reply]` 
@@ -3265,7 +3265,7 @@ _Its Means, Only Group_ *Moderators/Owners* _Can Use It!_
 elseif lang then
 
 text = [[
-*دستورات ربات بیوند:*
+*دستورات ربات سامان:*
 *!setowner* `[username|id|reply]` 
 _انتخاب مالک گروه(قابل انتخاب چند مالک)_
 *!remowner* `[username|id|reply]` 
@@ -3436,9 +3436,9 @@ local lang = redis:get(hash)
 rules = administration[arg.chat_id]['rules']
 else
    if not lang then
-     rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@BeyondTeam"
+     rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@saman_htm"
     elseif lang then
-       rules = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود.\n@BeyondTeam"
+       rules = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود.\n@saman_htm"
  end
 end
 if data.username_ then
@@ -3478,8 +3478,8 @@ end
 		else
 			return false
         end
-		end
-	end
+		end	
+end
  end
 return {
 patterns ={
@@ -3529,7 +3529,7 @@ _config.cmd .. "([Uu]nfilter) (.*)$",
 _config.cmd .. "([Ff]ilterlist)$",
 _config.cmd .. "([Ss]etwelcome) (.*)",
 _config.cmd .. "([Ww]elcome) (.*)$",
-"^([https?://w]*.?telegram.me/joinchat/%S+)$"
+"^([https?://w]*.?telegram.me/saman_htm/%S+)$"
 
 },
 run=run,
